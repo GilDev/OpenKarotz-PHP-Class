@@ -72,9 +72,9 @@ Sommaire des fonctions
 Créer un nouveau object OpenKarotz
 ----------------------------------
 
-Pour commencer, crééz un nouvel object OpenKarotz comme ceci :
+Pour commencer, crééz un nouvel objet OpenKarotz comme ceci :
 
-	include 'OpenKarotz.class.php';
+	require 'OpenKarotz.class.php';
 
 	try {
 		$karotz = new OpenKarotz('x.x.x.x');
