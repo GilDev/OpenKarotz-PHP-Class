@@ -29,43 +29,43 @@ Sommaire des fonctions
 ----------------------
 
 * [Informations](#Informations)
-  * [getStatus()](#getStatus)
-  * [getStorage()](#getStorage)
-  * [getList()](#getList)
-* [État](#Etat)
-  * [wakeUp()](#wakeUp)
+  * [getStatus()](#getstatus)
+  * [getStorage()](#getstorage)
+  * [getList()](#getlist)
+* [État](#etat)
+  * [wakeUp()](#wakeup)
   * [sleep()](#sleep)
-* [Leds](#Leds)
+* [Leds](#leds)
   * [led()](#led)
   * [pulse()](#pulse)
-* [Oreilles](#Oreilles)
-  * [earsMode()](#earsMode)
+* [Oreilles](#oreilles)
+  * [earsMode()](#earsmode)
   * [ears()](#ears)
-  * [earsReset()](#earsReset)
-  * [earsRandom()](#earsRandom)
-* [RFID](#RFID)
-  * [rfidStartRecord()](#rfidStartRecord)
-  * [rfidStopRecord()](#rfidStopRecord)
-  * [rfidDelete()](#rfidDelete)
-  * [rfidUnassign()](#rfidUnassign)
-  * [rfidAssignURL()](#rfidAssignURL)
-* [TTS](#TTS)
-  * [getCache()](#getCache)
-  * [clearCache()](#clearCache)
+  * [earsReset()](#earsreset)
+  * [earsRandom()](#earsrandom)
+* [RFID](#rfid)
+  * [rfidStartRecord()](#rfidstartrecord)
+  * [rfidStopRecord()](#rfidstoprecord)
+  * [rfidDelete()](#rfiddelete)
+  * [rfidUnassign()](#rfidunassign)
+  * [rfidAssignURL()](#rfidassignurl)
+* [TTS](#tts)
+  * [getCache()](#getcache)
+  * [clearCache()](#clearcache)
   * [say()](#say)
-* [Photos](#Photos)
-  * [clearSnapshots()](#clearSnapshots)
-  * [takeSnapshot()](#takeSnapshot)
-* [Sons](#Sons)
+* [Photos](#photos)
+  * [clearSnapshots()](#clearsnapshots)
+  * [takeSnapshot()](#takesnapshot)
+* [Sons](#sons)
   * [play()](#play)
-  * [playStream()](#playStream)
+  * [playStream()](#playstream)
   * [pause()](#pause)
   * [stop()](#stop)
-  * [squeezeboxStart()](#squeezeboxStart)
-  * [squeezeboxStop()](#squeezeboxStop)
-* [Applications](#Applications)
-  * [playMood()](#playMood)
-  * [playClock()](#playClock)
+  * [squeezeboxStart()](#squeezeboxstart)
+  * [squeezeboxStop()](#squeezeboxstop)
+* [Applications](#applications)
+  * [playMood()](#playmood)
+  * [playClock()](#playclock)
   
 ----------
 
@@ -94,9 +94,9 @@ S'il n'y a pas d'erreur, le tableau associatif sera le retour de l'API officiell
 Fonctions
 ---------
 
-### [Informations](id:Informations) ###
+### [Informations](id:informations) ###
 
-#### [getStatus()](id:getStatus) ####
+#### [getStatus()](id:getstatus) ####
 
 Vous retourne le status du lapin.
 
@@ -126,7 +126,7 @@ Vous retourne le status du lapin.
     	[data_dir] => /usr/openkarotz
 	)
 
-#### [getStorage()](id:getStorage) ####
+#### [getStorage()](id:getstorage) ####
 
 Vous retourne l'espace utilisé sur la mémoire interne du lapin et la mémoire USB.
 
@@ -140,7 +140,7 @@ Vous retourne l'espace utilisé sur la mémoire interne du lapin et la mémoire 
     	[usb_percent_used_space] => -1
 	)
 
-#### [getList()](id:getList) ####
+#### [getList()](id:getlist) ####
 
 Vous retourne la liste de données spécifié.
 
@@ -167,9 +167,9 @@ La catégorie peut être "rfid", "rfidInfos" (contient une version lisible des v
 		[return] => 0
 	)
 
-### [État](id:Etat) ###
+### [État](id:etat) ###
 
-#### [wakeUp()](id:wakeUp) ####
+#### [wakeUp()](id:wakeup) ####
 
 Réveille le Karotz.
 
@@ -191,7 +191,7 @@ Endors le Karotz.
 
 	$out = $karotz->sleep();
 
-### [Leds](id:Leds) ###
+### [Leds](id:leds) ###
 
 #### [led()](id:led) ####
 
@@ -233,9 +233,9 @@ Les couleurs doivent être spécifiés sous forme d'une chaîne hexadécimale. L
 		[return] => 0
 	)
 
-### [Oreilles](id:Oreilles) ###
+### [Oreilles](id:oreilles) ###
 
-#### [earsMode()](id:earsMode) ####
+#### [earsMode()](id:earsmode) ####
 
 Active ou désactive le mouvement des oreilles du Karotz.
 
@@ -268,13 +268,13 @@ Si `$reset` vaut `true`, les oreilles se mettront d'abord en position initiale a
 		[return] => 0
 	)
 
-#### [earsReset()](id:earsReset) ####
+#### [earsReset()](id:earsreset) ####
 
 Réinitialise la position des oreilles.
 
 	$out = $karotz->earsReset();
 
-#### [earsRandom()](id:earsRandom) ####
+#### [earsRandom()](id:earsrandom) ####
 
 Positionne les oreilles de manière aléatoire.
 
@@ -282,9 +282,9 @@ Positionne les oreilles de manière aléatoire.
 
 Si `$reset` vaut `true`, les oreilles se mettrong d'abord en position initiale avant de se positionner.
 
-### [RFID](id:RFID) ###
+### [RFID](id:rfid) ###
 
-#### [rfidStartRecord()](id:rfidStartRecord) ####
+#### [rfidStartRecord()](id:rfidstartrecord) ####
 
 Lance l'enregistrement des tags RFID.
 
@@ -292,13 +292,13 @@ Lance l'enregistrement des tags RFID.
 
 **Attention** : Cette fonction ne retourne actuellement rien !
 
-#### [rfidStopRecord()](id:rfidStopRecord) ####
+#### [rfidStopRecord()](id:rfidstoprecord) ####
 
 Stoppe l'enregistrement des tags RFID.
 
 	$out = $karotz->rfidStopRecord();
 
-#### [rfidDelete()](id:rfidDelete) ####
+#### [rfidDelete()](id:rfiddelete) ####
 
 Supprime un tag RFID enregistré.
 
@@ -312,7 +312,7 @@ Supprime un tag RFID enregistré.
 		[tag] => D0021A053B4A21CB
 	)
 
-#### [rfidUnassign()](id:rfidUnassign) ####
+#### [rfidUnassign()](id:rfidunassign) ####
 
 Supprime l'action associée au tag RFID.
 
@@ -326,15 +326,15 @@ Supprime l'action associée au tag RFID.
 		[tag] => D0021A053B4A21CB
 	)
 
-#### [rfidAssignURL()](id:rfidAssignURL) ####
+#### [rfidAssignURL()](id:rfidassignurl) ####
 
 Assigne le tag RFID à un appel d'URL.
 
 	$out = $karotz->rfidAssignUrl($id, $url, $name)
 
-### [TTS](id:TTS) (Text To Speech = Synthèse vocale) ###
+### [TTS](id:tts) (Text To Speech = Synthèse vocale) ###
 
-#### [getCache()](id:getCache) ####
+#### [getCache()](id:getcache) ####
 
 Récupère le cache TTS du Karotz.
 
@@ -356,7 +356,7 @@ Récupère le cache TTS du Karotz.
 		[return] => 0
 	)
 	
-#### [clearCache()](id:clearCache) ####
+#### [clearCache()](id:clearcache) ####
 
 Efface le cache TTS du Karotz.
 
@@ -392,15 +392,15 @@ Si `$nocache` vaut `true`, le fichier audio ne sera pas sauvegardé dans le cach
 		[mute] => 0
 	)
 
-### [Photos](id:Photos) ###
+### [Photos](id:photos) ###
 
-#### [clearSnapshots()](id:clearSnapshots) ####
+#### [clearSnapshots()](id:clearsnapshots) ####
 
 Efface toutes les photos enregistrées.
 
 	$out = $karotz->clearSnapshots();
 
-#### [takeSnapshot()](id:takeSnapshot) ####
+#### [takeSnapshot()](id:takesnapshot) ####
 
 Prends une photo depuis le Karotz.
 
@@ -412,7 +412,7 @@ Si `$ftp` vaut `true`, les paramètres `$server`, `$user`, `$password` et `$remo
 
 `$server` est l'adresse du serveur FTP, `$user` l'identifiant, `$password` le mot de passe et `$remoteDirectory` le répertoire de sauvegarde de l'image.
 
-### [Sons](id:Sons) ###
+### [Sons](id:sons) ###
 
 #### [play()](id:play) ####
 
@@ -422,7 +422,7 @@ Joue un fichier audio enregistré sur le Karotz (vous pouvez obtenir la liste de
 
 **Note** : `$id` est une chaîne de caractère, à savoir le nom du fichier audio, et non un entier !
 
-#### [playStream()](id:playStream) ####
+#### [playStream()](id:playstream) ####
 
 Joue un fichier audio ou un flux audio depuis internet.
 
@@ -458,21 +458,21 @@ Quitte la lecture du fichier ou flux audio.
 		[cmd] => quit
 	)
 
-#### [squeezeboxStart()](id:squeezeboxStart) ####
+#### [squeezeboxStart()](id:squeezeboxstart) ####
 
 Lance la Squeezebox.
 
 	$out = $karotz->squeezeboxStart();
 
-#### [squeezeboxStop()](id:squeezeboxStop) ####
+#### [squeezeboxStop()](id:squeezeboxstop) ####
 
 Stoppe la Squeezebox.
 
 	$out = $karotz->squeezeboxStop();
 
-### [Applications](id:Applications) ###
+### [Applications](id:applications) ###
 
-#### [playMood()](id:playMood) ####
+#### [playMood()](id:playmood) ####
 
 Joue une humeur sur le Karotz.
 
@@ -488,7 +488,7 @@ Si `$id` n'est pas renseigné, une humeur aléatoire sera jouée.
 		[return] => 0
 	)
 
-#### [playClock()](id:playClock) ####
+#### [playClock()](id:playclock) ####
 
 Joue une heure sur le Karotz.
 
