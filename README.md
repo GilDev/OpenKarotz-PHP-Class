@@ -28,7 +28,7 @@ Pour toute question, me contacter sur [Twitter](http://twitter.com/GilDev) ou pa
 Sommaire des fonctions
 ----------------------
 
-* [Informations](#Informations)
+* [Informations](#informations)
   * [getStatus()](#getstatus)
   * [getStorage()](#getstorage)
   * [getList()](#getlist)
@@ -66,7 +66,7 @@ Sommaire des fonctions
 * [Applications](#applications)
   * [playMood()](#playmood)
   * [playClock()](#playclock)
-  
+
 ----------
 
 Créer un nouveau object OpenKarotz
